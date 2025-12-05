@@ -14,10 +14,8 @@ def generate_weather():
         response.raise_for_status()
         print(response.text)
 
-    except requests.exceptions.HTTPError as http_err:
-        print('HTTP ошибка: {}'.format(http_err))
-        print('Код ошибки: {}'.format(response.status_code))
-        print('Ответ сервера: {}'.format(response.text))
+    except requests.HTTPError:
+        print('Вы ввели некорректное название города.')
 
 
 if __name__ == '__main__':
