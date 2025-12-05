@@ -54,13 +54,7 @@ def generate_weather():
         print(response.text) # Отображение результата запроса
 ```
 
-В случае если возникнет ошибка при отправке запроса на сервер, данная ниже проверка 
-укажет Вам всю информацию об ошибке, по которой Вы сможете отладить код и получить 
-желаемый результат:
+Если Вы введёте некорректное название города, то получите следующую ошибку:
 
-```Python    
-    except requests.exceptions.HTTPError as http_err:
-        print('HTTP ошибка: {}'.format(http_err)) 
-        print('Код ошибки: {}'.format(response.status_code))
-        print('Ответ сервера: {}'.format(response.text))
-```
+<img width="345" height="44" alt="image" src="https://github.com/user-attachments/assets/7bae8757-59dc-4360-8bde-6eb5702e7909" />
+
